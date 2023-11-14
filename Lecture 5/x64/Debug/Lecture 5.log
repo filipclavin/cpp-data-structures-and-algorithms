@@ -1,0 +1,5 @@
+﻿  main.cpp
+C:\src\cpp\Data Structures and Algorithms\Lecture 5\main.cpp(93,34): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\src\cpp\Data Structures and Algorithms\Lecture 5\main.cpp(93,31): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\src\cpp\Data Structures and Algorithms\Lecture 5\main.cpp(93,58): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  Lecture 5.vcxproj -> C:\src\cpp\Data Structures and Algorithms\x64\Debug\Lecture 5.exe
