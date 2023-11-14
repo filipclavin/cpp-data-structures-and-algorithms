@@ -19,6 +19,8 @@ void addNeighbors(Graph* graph) {
 	}
 }
 
+
+
 int main() {
 	Graph* graph = new Graph();
 
@@ -75,18 +77,17 @@ int main() {
 	}
 
 	std::string line;
-	int y = 0;
 
-	while (std::getline(file, line) && y < 10) {
+	while (std::getline(file, line)) {
 		lines.push_back(line);
-		y++;
 	}
+
 	file.close();
 
 	for (int y = 0; y < lines.size(); y++) {
 		std::string line = lines[y];
 
-		for (int x = 0; x < 20; x++) {
+		for (int x = 0; x < line.size(); x++) {
 			char c = line[x];
 			if (c == 'X') continue;
 
