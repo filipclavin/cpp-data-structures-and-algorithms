@@ -13,6 +13,7 @@ bool Contains(std::vector<Node*>& nodeVec, Node* node) {
 void DepthFirstHelper(Node* currentNode, std::vector<Node*>& visitedNodes) {
 	visitedNodes.push_back(currentNode);
 	currentNode->position.Print();
+
 	for (Node* neighbor : currentNode->neighbors) {
 		if (Contains(visitedNodes, neighbor)) continue;
 		DepthFirstHelper(neighbor, visitedNodes);

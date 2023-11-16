@@ -78,7 +78,7 @@ int main() {
 
 	std::string line;
 
-	while (std::getline(file, line)) {
+	while (std::getline(file, line) && (line[0] == 'o' || line[0] == 'X')) {
 		lines.push_back(line);
 	}
 
