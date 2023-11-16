@@ -25,3 +25,18 @@ void Graph::PrintDepthFirst(Node* startNode) {
 
 	DepthFirstHelper(startNode, visited);
 }
+
+void Graph::AddNeighbors() {
+	for (Node* node : nodes) {
+		for (Node* otherNode : nodes) {
+			if (
+				otherNode->position.x == node->position.x - 1 && otherNode->position.y == node->position.y ||
+				otherNode->position.x == node->position.x + 1 && otherNode->position.y == node->position.y ||
+				otherNode->position.x == node->position.x && otherNode->position.y == node->position.y - 1 ||
+				otherNode->position.x == node->position.x && otherNode->position.y == node->position.y + 1
+				) {
+				node->neighbors.push_back(otherNode);
+			}
+		}
+	}
+}

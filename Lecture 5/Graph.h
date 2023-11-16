@@ -9,4 +9,6 @@ public:
 	std::vector<Node*> nodes;
 
 	void PrintDepthFirst(Node* startNode);
+
+	void AddNeighbors();
 };
