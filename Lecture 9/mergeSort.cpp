@@ -32,7 +32,7 @@ std::vector<int> merge(std::vector<int> left, std::vector<int> right) {
 	std::vector<int> result;
 
 	while (left.size() > 0 && right.size() > 0) {
-		if (left[0] <= right[0]) {
+		if (left[0] < right[0]) {
 			result.push_back(left[0]);
 			left.erase(left.begin());
 		} else {

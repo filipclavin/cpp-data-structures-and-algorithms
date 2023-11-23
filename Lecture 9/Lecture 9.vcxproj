@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\Lecture 7\quickSort.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="sort.cpp" />
   </ItemGroup>

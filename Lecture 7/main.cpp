@@ -38,13 +38,12 @@ int main() {
 		std::cout << std::endl << std::endl;
 	}
 
-	auto start = std::chrono::high_resolution_clock::now();
+	std::chrono::steady_clock::time_point begin = std::chrono::steady_clock::now();
 	//quickSort(vec);
 	countingSort(vec);
-	auto end = std::chrono::high_resolution_clock::now();
+	std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
 
-	std::chrono::duration<double> elapsed = end - start;
-	std::cout << "Sorting time: " << elapsed.count() << " s" << std::endl << std::endl;
+	std::cout << std::endl << "Time taken: " << std::chrono::duration_cast<std::chrono::microseconds>(end - begin).count() << " microseconds" << std::endl << std::endl;
 
 	if (log == 'y') {
 		std::cout << "After sorting: " << std::endl;

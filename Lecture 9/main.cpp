@@ -1,4 +1,5 @@
 #include <iostream>
+#include <chrono>
 
 #include "sort.h"
 
@@ -23,11 +24,18 @@ int main() {
 	}
 	std::cout << std::endl;
 
+	std::chrono::steady_clock::time_point begin = std::chrono::steady_clock::now();
 	mergeSort(vec);
+	//quickSort(vec);
+	std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
 
+	std::cout << "Sorted: " << std::endl;
 	for (int i = 0; i < vec.size(); i++) {
 		std::cout << vec[i] << " ";
 	}
+	std::cout << std::endl;
+
+	std::cout << "Time taken: " << std::chrono::duration_cast<std::chrono::microseconds>(end - begin).count() << " microseconds" << std::endl;
 
 	return 0;
 }
